@@ -88,10 +88,10 @@ export default class RunningScene extends Scene {
   private isPlayerHeadStart = false;
 
   async load() {
-    const ambient = new AmbientLight(0xFFFFFF, 1);
+    const ambient = new AmbientLight(0xFFFFFF, 1.5);
     this.add(ambient);
 
-    const light = new DirectionalLight(0xf6b26b, 1);
+    const light = new DirectionalLight(0xf6b26b, 1.5);
 
     light.castShadow = true;
     light.position.set(0, 40, -10);
@@ -572,7 +572,7 @@ export default class RunningScene extends Scene {
     mesh3.scale.set(0.06, 0.06, 0.06);
     mesh3.position.set(-8, -31, 0);
     meshGroup.add(mesh3);
-    meshGroup.position.set(0, 0, -800);
+    meshGroup.position.set(10, 0, -800);
     this.add(meshGroup);
     meshGroup.visible = false;
     this.obstacleArray.push(meshGroup);
