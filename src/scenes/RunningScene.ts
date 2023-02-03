@@ -189,6 +189,7 @@ export default class RunningScene extends Scene {
   }
 
   initialize() {
+    this.isGamePaused = false;
     document.onkeydown = (e) => {
       if (!this.isGameOver && !this.isGamePaused) {
         if (e.key === 'ArrowLeft') {
@@ -324,6 +325,7 @@ export default class RunningScene extends Scene {
   }
 
   private restartGame() {
+    this.isGamePaused = false;
     (document.getElementById('game-over-modal') as HTMLInputElement).style.display = 'none';
     this.currentObstacleOne.position.z = -1200;
     this.currentObstacleTwo.position.z = -1500;
